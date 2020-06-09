@@ -1,0 +1,26 @@
+.loader {
+    display: inline-block;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 0.1em;
+    text-indent: -9999em;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-left-color: #fff;
+    transform: translateZ(0);
+    margin-right: 0.5em;
+    animation: load 0.8s infinite linear;
+}
+:global .btn-default :local .loader {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-left-color: #333;
+}
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
